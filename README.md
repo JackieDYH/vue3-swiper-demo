@@ -1,5 +1,7 @@
 # vue3-swiper-demo
 
+- https://swiperjs.com
+
 ## Project setup
 
 ```
