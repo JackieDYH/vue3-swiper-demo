@@ -1,7 +1,7 @@
 <!--
  * @Author: Jackie
  * @Date: 2023-08-10 20:20:55
- * @LastEditTime: 2023-08-14 17:41:48
+ * @LastEditTime: 2023-08-14 18:22:34
  * @LastEditors: Jackie
  * @Description: scroll
  * @FilePath: /vue3-swiper-demo/src/views/ScrollView.vue
@@ -17,9 +17,10 @@
     <br />
     <Scroll7 />
     <br /> -->
-    <Scroll8 />
+    <!-- <Scroll8 /> -->
     <br />
-    <Scroll9 />
+    <!-- <Scroll9 /> -->
+    <Scroll10 />
   </div>
 </template>
 
@@ -30,6 +31,7 @@ import Scroll6 from '@/components/scroll/Scroll6.vue';
 import Scroll7 from '@/components/scroll/Scroll7.vue';
 import Scroll8 from '@/components/scroll/Scroll8.vue';
 import Scroll9 from '@/components/scroll/Scroll9.vue';
+import Scroll10 from '@/components/scroll/Scroll10.vue';
 
 const minWidth = 375;
 const width =

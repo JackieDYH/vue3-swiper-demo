@@ -1,28 +1,31 @@
 <!--
  * @Author: Jackie
- * @Date: 2023-08-14 16:30:43
- * @LastEditTime: 2023-08-14 18:16:22
+ * @Date: 2023-08-14 18:20:05
+ * @LastEditTime: 2023-08-14 18:41:30
  * @LastEditors: Jackie
- * @Description: 循环滚动
- * @FilePath: /vue3-swiper-demo/src/components/scroll/Scroll8.vue
+ * @Description: file content
+ * @FilePath: /vue3-swiper-demo/src/components/scroll/Scroll10.vue
  * @version: 
 -->
 <template>
   <div class="scroll" ref="scroller" :style="style">
-    <div class="price-band-group">
-      <div class="price-band-item DIN-medium" v-for="item in items" :key="item">
-        <span v-if="item"> {{ item }} ${{ item }} </span>
+    <div class="price-band-group" v-if="items.length">
+      <div
+        class="price-band-item DIN-medium"
+        v-for="(item, index) in itemsWithTail"
+        :key="index"
+      >
+        <span v-if="item !== null"> {{ item }} ${{ item }} </span>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
 const scroller = ref(null);
 const timerId = ref(null);
-const scrollLeftEnd = ref(false);
-const items = ref(Array.from({ length: 22 }, (_, index) => index + 1));
+const items = ref(Array.from({ length: 12 }, (_, index) => index + 1));
 const pauseAnimate = () => {
   timerId.value && clearInterval(timerId.value);
   timerId.value = null;
@@ -39,14 +42,19 @@ const playAnimate = () => {
   }, 33);
 };
 
+const itemsWithTail = computed(
+  () =>
+    items.value.length >= 10 ? items.value.concat(items.value) : items.value
+  //   items.value.concat(items.value.slice(0, 4))
+);
+
 onMounted(() => {
-  console.log(111);
-  // 必须在100ms后进行，否则计算不准确
   setTimeout(() => {
     scroller.value.scrollLeft = 0;
     playAnimate();
   }, 100);
 });
+
 onUnmounted(() => {
   pauseAnimate();
 });
@@ -59,7 +67,8 @@ onUnmounted(() => {
   background: linear-gradient(90deg, #31daff 0.47%, #316bff 100%);
   padding: 13px 0;
   box-sizing: border-box;
-  overflow: auto;
+  overflow: hidden;
+  transition: scroll-left 1s ease-in-out; /* 添加过渡效果 */
   .price-band-group {
     display: inline-block;
     white-space: nowrap;
