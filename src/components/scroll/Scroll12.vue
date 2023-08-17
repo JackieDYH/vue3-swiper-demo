@@ -1,7 +1,7 @@
 <!--
  * @Author: Jackie
  * @Date: 2023-08-16 21:27:42
- * @LastEditTime: 2023-08-16 21:41:51
+ * @LastEditTime: 2023-08-17 10:49:56
  * @LastEditors: Jackie
  * @Description: scroll 仿okx 水平滚动 - 效果基本满足需求
  * @FilePath: /vue3-swiper-demo/src/components/scroll/Scroll12.vue
@@ -34,7 +34,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-const items = ref(Array.from({ length: 26 }, (_, index) => index + 1));
+const items = ref(Array.from({ length: 5 }, (_, index) => index + 1));
 </script>
 
 <style lang="scss" scoped>
@@ -57,11 +57,19 @@ const items = ref(Array.from({ length: 26 }, (_, index) => index + 1));
       animation-delay: 8s;
       opacity: 0;
 
-      animation: tickerScroll 240s linear infinite normal;
+      animation: tickerScroll 20s linear infinite normal;
       transform: translateX(0);
 
       transition: all linear;
       will-change: transform, opacity;
+
+      /* 没有超出不滚动 */
+      /* @media (max-width: 100%) {
+        &.ticker-scroll {
+          animation: none;
+        }
+      } */
+
       .ticker-scroll-item {
         display: inline-block;
         font-size: 18px;
