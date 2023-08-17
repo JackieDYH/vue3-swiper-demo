@@ -1,9 +1,9 @@
 <!--
  * @Author: Jackie
  * @Date: 2023-08-17 10:55:21
- * @LastEditTime: 2023-08-17 11:39:17
+ * @LastEditTime: 2023-08-17 17:32:16
  * @LastEditors: Jackie
- * @Description: scroll滚动 - 循环滚动，不超出不滚动
+ * @Description: scroll滚动 - 循环滚动，不超出不滚动 无缝滚动
  * @FilePath: /vue3-swiper-demo/src/components/scroll/Scroll13.vue
  * @version: 
 -->
