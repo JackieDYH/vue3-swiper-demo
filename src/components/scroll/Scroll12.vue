@@ -1,7 +1,7 @@
 <!--
  * @Author: Jackie
  * @Date: 2023-08-16 21:27:42
- * @LastEditTime: 2023-08-17 10:49:56
+ * @LastEditTime: 2023-08-17 10:56:47
  * @LastEditors: Jackie
  * @Description: scroll 仿okx 水平滚动 - 效果基本满足需求
  * @FilePath: /vue3-swiper-demo/src/components/scroll/Scroll12.vue
@@ -34,7 +34,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-const items = ref(Array.from({ length: 5 }, (_, index) => index + 1));
+const items = ref(Array.from({ length: 26 }, (_, index) => index + 1));
 </script>
 
 <style lang="scss" scoped>
