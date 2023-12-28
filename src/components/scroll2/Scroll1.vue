@@ -1,7 +1,7 @@
 <!--
  * @Author: Jackie
  * @Date: 2023-12-28 15:05:17
- * @LastEditTime: 2023-12-28 16:28:28
+ * @LastEditTime: 2023-12-28 16:33:25
  * @LastEditors: Jackie
  * @Description: Scroll1 数据循环滚动 - over
  * @FilePath: /vue3-swiper-demo/src/components/scroll2/Scroll1.vue
@@ -31,6 +31,8 @@ const timerId = ref(null);
 
 const playAnimate = () => {
   const wrapElement = wrapRef.value;
+  if (wrapElement === null) return;
+
   const maxScrollLeft = wrapElement.scrollWidth - wrapElement.clientWidth;
   if (maxScrollLeft) {
     console.log(
@@ -52,7 +54,9 @@ onMounted(() => {
   console.log('可视宽度', wrapRef.value.clientWidth);
   playAnimate();
 });
-onUnmounted(() => {});
+onUnmounted(() => {
+  //   wrapRef.value = null;
+});
 </script>
 
 <style lang="scss" scoped>
