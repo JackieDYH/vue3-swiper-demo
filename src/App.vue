@@ -1,7 +1,7 @@
 <!--
  * @Author: Jackie
  * @Date: 2023-06-25 09:58:10
- * @LastEditTime: 2023-08-11 14:14:14
+ * @LastEditTime: 2023-12-28 15:08:00
  * @LastEditors: Jackie
  * @Description: file content
  * @FilePath: /vue3-swiper-demo/src/App.vue
@@ -12,6 +12,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/scroll">Scroll</router-link> |
+    <router-link to="/scroll2">Scroll2</router-link> |
   </nav>
   <router-view />
 </template>
