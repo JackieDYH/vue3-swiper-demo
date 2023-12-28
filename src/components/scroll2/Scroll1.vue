@@ -1,7 +1,7 @@
 <!--
  * @Author: Jackie
  * @Date: 2023-12-28 15:05:17
- * @LastEditTime: 2023-12-28 16:33:25
+ * @LastEditTime: 2023-12-28 16:37:00
  * @LastEditors: Jackie
  * @Description: Scroll1 数据循环滚动 - over
  * @FilePath: /vue3-swiper-demo/src/components/scroll2/Scroll1.vue
@@ -23,7 +23,7 @@ const items = ref(Array.from({ length: 26 }, (_, index) => index + 1));
 
 const wrapRef = ref(null);
 const isShowItems = ref(false);
-const timerId = ref(null);
+const animationId = ref(null);
 
 // scrollWidth 总宽度，包括被隐藏的部分
 // clientWidth 可视宽度，不包括被隐藏的部分 window.innerWidth
@@ -45,7 +45,8 @@ const playAnimate = () => {
       wrapElement.scrollLeft -= maxScrollLeft;
     }
     wrapElement.scrollLeft += 1;
-    requestAnimationFrame(playAnimate);
+    // 动画循环
+    animationId.value = requestAnimationFrame(playAnimate);
   }
 };
 
@@ -56,6 +57,9 @@ onMounted(() => {
 });
 onUnmounted(() => {
   //   wrapRef.value = null;
+  console.log('取消动画循环', animationId.value);
+  // 在需要取消动画循环时
+  cancelAnimationFrame(animationId);
 });
 </script>
 
