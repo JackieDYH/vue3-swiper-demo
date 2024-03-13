@@ -1,7 +1,7 @@
 /*
  * @Author: Jackie
  * @Date: 2023-06-25 09:58:10
- * @LastEditTime: 2023-12-28 15:07:05
+ * @LastEditTime: 2024-03-13 17:58:39
  * @LastEditors: Jackie
  * @Description: router
  * @FilePath: /vue3-swiper-demo/src/router/index.js
@@ -34,6 +34,11 @@ const routes = [
     path: '/scroll2',
     name: 'scroll2',
     component: () => import('../views/ScrollView2.vue')
+  },
+  {
+    path: '/scroll3',
+    name: 'scroll3',
+    component: () => import('../views/ScrollView3.vue')
   }
 ];
 
