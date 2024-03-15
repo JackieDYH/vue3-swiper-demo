@@ -1,9 +1,9 @@
 <!--
  * @Author: Jackie
  * @Date: 2024-03-13 17:56:55
- * @LastEditTime: 2024-03-13 18:04:37
+ * @LastEditTime: 2024-03-15 15:28:36
  * @LastEditors: Jackie
- * @Description: file content
+ * @Description: Vue3SeamlessScroll
  * @FilePath: /vue3-swiper-demo/src/components/scroll3/Scroll1.vue
  * @version: 
 -->
