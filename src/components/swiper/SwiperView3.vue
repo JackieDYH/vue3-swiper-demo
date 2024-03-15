@@ -1,7 +1,7 @@
 <!--
  * @Author: Jackie
  * @Date: 2024-03-15 15:33:04
- * @LastEditTime: 2024-03-15 15:45:58
+ * @LastEditTime: 2024-03-15 16:04:18
  * @LastEditors: Jackie
  * @Description: Swiper v11
  * @FilePath: /vue3-swiper-demo/src/components/swiper/SwiperView3.vue
@@ -11,6 +11,7 @@
   <div class="swiper-wrap">
     <!-- 
         loop="true" 是否循环
+        data-swiper-autoplay="2000" 自动轮播
         slides-per-view 一屏幕显示几个
         space-between 两个slide之间的间距
         navigation  是否显示导航 navigation：true 默认  ： {nextEl:'.swiper-button-next', prevEl:'.swiper-button-prev'} 自定义
