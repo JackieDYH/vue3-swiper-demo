@@ -3,7 +3,7 @@
  * @Date: 2023-06-30 19:27:36
  * @LastEditTime: 2023-06-30 20:22:21
  * @LastEditors: Jackie
- * @Description: file content
+ * @Description: Swiper 轮播图组件-好用
  * @FilePath: /vue3-swiper-demo/src/components/swiper/SwiperView5.vue
  * @version: 
 -->
@@ -46,10 +46,10 @@ import { reactive } from 'vue';
 const data = reactive([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 //默认滑动效果（这里面注释掉的可以不要）
-const onSwiper = (swiper) => {
+const onSwiper = swiper => {
   console.log(swiper);
 };
-const onSlideChange = (e) => {
+const onSlideChange = e => {
   // swiper切换的时候执行的方法
   console.log('slide change', e.activeIndex);
 };
